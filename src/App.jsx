@@ -7,6 +7,7 @@ import {
   DocumentMagnifyingGlassIcon, SwatchIcon, AdjustmentsHorizontalIcon,
   ArrowsRightLeftIcon, CodeBracketIcon, DocumentChartBarIcon,
   TableCellsIcon, MagnifyingGlassIcon, ClipboardDocumentListIcon, PencilIcon,
+  ArrowsPointingOutIcon,
 } from '@heroicons/react/24/outline'
 
 const MergePage = lazy(() => import('./pages/MergePage'))
@@ -36,6 +37,7 @@ const ExcelToPdfPage = lazy(() => import('./pages/ExcelToPdfPage'))
 const OcrPage = lazy(() => import('./pages/OcrPage'))
 const FormFillerPage = lazy(() => import('./pages/FormFillerPage'))
 const SignaturePage = lazy(() => import('./pages/SignaturePage'))
+const ImageResizePage = lazy(() => import('./pages/ImageResizePage'))
 
 const CATEGORIES = [
   {
@@ -90,6 +92,12 @@ const CATEGORIES = [
       { id: 'pdf-to-jpg', label: 'PDF → JPG', description: 'Convert each PDF page to a JPG image', icon: PhotoIcon, color: 'text-amber-400', bg: 'bg-amber-950/40', border: 'border-amber-900', component: PdfToJpgPage },
       { id: 'pdf-to-text', label: 'PDF → Text', description: 'Extract all text content from a PDF', icon: DocumentTextIcon, color: 'text-sky-400', bg: 'bg-sky-950/40', border: 'border-sky-900', component: PdfToTextPage },
       { id: 'pdf-to-markdown', label: 'PDF → Markdown', description: 'Convert PDF content to Markdown format', icon: DocumentChartBarIcon, color: 'text-lime-400', bg: 'bg-lime-950/40', border: 'border-lime-900', component: PdfToMarkdownPage },
+    ],
+  },
+  {
+    label: 'Image Tools',
+    tools: [
+      { id: 'image-resize', label: 'Resize Image', description: 'Resize to HD, 4K, social media sizes or custom', icon: ArrowsPointingOutIcon, color: 'text-pink-400', bg: 'bg-pink-950/40', border: 'border-pink-900', component: ImageResizePage },
     ],
   },
   {
