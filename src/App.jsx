@@ -6,6 +6,7 @@ import {
   DocumentTextIcon, TagIcon, HashtagIcon, EyeSlashIcon, KeyIcon, LockOpenIcon,
   DocumentMagnifyingGlassIcon, SwatchIcon, AdjustmentsHorizontalIcon,
   ArrowsRightLeftIcon, CodeBracketIcon, DocumentChartBarIcon,
+  TableCellsIcon, MagnifyingGlassIcon, ClipboardDocumentListIcon, PencilIcon,
 } from '@heroicons/react/24/outline'
 
 const MergePage = lazy(() => import('./pages/MergePage'))
@@ -30,6 +31,11 @@ const PdfToMarkdownPage = lazy(() => import('./pages/PdfToMarkdownPage'))
 const TxtToPdfPage = lazy(() => import('./pages/TxtToPdfPage'))
 const SvgToPdfPage = lazy(() => import('./pages/SvgToPdfPage'))
 const PdfToJpgPage = lazy(() => import('./pages/PdfToJpgPage'))
+const WordToPdfPage = lazy(() => import('./pages/WordToPdfPage'))
+const ExcelToPdfPage = lazy(() => import('./pages/ExcelToPdfPage'))
+const OcrPage = lazy(() => import('./pages/OcrPage'))
+const FormFillerPage = lazy(() => import('./pages/FormFillerPage'))
+const SignaturePage = lazy(() => import('./pages/SignaturePage'))
 
 const CATEGORIES = [
   {
@@ -73,6 +79,8 @@ const CATEGORIES = [
       { id: 'image-to-pdf', label: 'Image → PDF', description: 'Pack PNG/JPG images into a PDF', icon: DocumentArrowUpIcon, color: 'text-orange-400', bg: 'bg-orange-950/40', border: 'border-orange-900', component: ImageToPdfPage },
       { id: 'txt-to-pdf', label: 'TXT → PDF', description: 'Convert plain text files to PDF', icon: DocumentTextIcon, color: 'text-blue-400', bg: 'bg-blue-950/40', border: 'border-blue-900', component: TxtToPdfPage },
       { id: 'svg-to-pdf', label: 'SVG → PDF', description: 'Convert SVG vector files to PDF', icon: CodeBracketIcon, color: 'text-fuchsia-400', bg: 'bg-fuchsia-950/40', border: 'border-fuchsia-900', component: SvgToPdfPage },
+      { id: 'word-to-pdf', label: 'Word → PDF', description: 'Convert .docx Word documents to PDF', icon: DocumentTextIcon, color: 'text-blue-400', bg: 'bg-blue-950/40', border: 'border-blue-900', component: WordToPdfPage },
+      { id: 'excel-to-pdf', label: 'Excel → PDF', description: 'Convert .xlsx spreadsheets to PDF', icon: TableCellsIcon, color: 'text-green-400', bg: 'bg-green-950/40', border: 'border-green-900', component: ExcelToPdfPage },
     ],
   },
   {
@@ -82,6 +90,14 @@ const CATEGORIES = [
       { id: 'pdf-to-jpg', label: 'PDF → JPG', description: 'Convert each PDF page to a JPG image', icon: PhotoIcon, color: 'text-amber-400', bg: 'bg-amber-950/40', border: 'border-amber-900', component: PdfToJpgPage },
       { id: 'pdf-to-text', label: 'PDF → Text', description: 'Extract all text content from a PDF', icon: DocumentTextIcon, color: 'text-sky-400', bg: 'bg-sky-950/40', border: 'border-sky-900', component: PdfToTextPage },
       { id: 'pdf-to-markdown', label: 'PDF → Markdown', description: 'Convert PDF content to Markdown format', icon: DocumentChartBarIcon, color: 'text-lime-400', bg: 'bg-lime-950/40', border: 'border-lime-900', component: PdfToMarkdownPage },
+    ],
+  },
+  {
+    label: 'Advanced',
+    tools: [
+      { id: 'ocr', label: 'OCR PDF', description: 'Extract text from scanned PDFs and images', icon: MagnifyingGlassIcon, color: 'text-amber-400', bg: 'bg-amber-950/40', border: 'border-amber-900', component: OcrPage },
+      { id: 'form-filler', label: 'Form Filler', description: 'Detect and fill PDF form fields', icon: ClipboardDocumentListIcon, color: 'text-teal-400', bg: 'bg-teal-950/40', border: 'border-teal-900', component: FormFillerPage },
+      { id: 'sign', label: 'Sign PDF', description: 'Draw or type a signature onto a PDF', icon: PencilIcon, color: 'text-violet-400', bg: 'bg-violet-950/40', border: 'border-violet-900', component: SignaturePage },
     ],
   },
 ]
