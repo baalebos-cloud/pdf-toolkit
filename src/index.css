@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100 antialiased;
+  }
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .tool-card {
+    @apply bg-gray-900 border border-gray-800 rounded-2xl p-5 flex flex-col gap-3 cursor-pointer
+           hover:border-indigo-500 hover:bg-gray-800 transition-all duration-200;
+  }
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-5 py-2.5 rounded-xl
+           transition-colors duration-200 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply bg-gray-800 hover:bg-gray-700 text-gray-300 font-medium px-4 py-2 rounded-xl
+           transition-colors duration-200;
+  }
+  .input-file-zone {
+    @apply border-2 border-dashed border-gray-700 rounded-2xl p-10 text-center
+           hover:border-indigo-500 transition-colors duration-200 cursor-pointer;
+  }
+}
